@@ -61,11 +61,11 @@ async function getActualTasks(link, targetDate) {
 
         const tasksOutput = results.join('\n');
         await browser.close();
-        return tasksOutput || `No tasks logged for ${dateStr}.`;
+        return tasksOutput || null;
     } catch (error) {
         console.error('Error fetching tasks:', error);
         await browser.close();
-        return 'Error fetching tasks.';
+        return null;
     }
 }
 
@@ -132,6 +132,12 @@ async function main() {
         console.log(`Processing project: ${code}`);
         const projectData = projects[code];
         const actualTasks = await getActualTasks(projectData.link_log_task, targetDate);
+        
+        if (!actualTasks) {
+            console.log(`No tasks logged for project ${code} on ${targetDate.toLocaleDateString('en-GB')}. Skipping email.`);
+            continue;
+        }
+
         await sendEmail(projectData, actualTasks, targetDate);
     }
 }
