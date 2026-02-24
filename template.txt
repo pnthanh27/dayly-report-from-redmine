@@ -1,0 +1,11 @@
+Dear {{dear}},
+Em xin gửi báo cáo công việc:
+
+1. Actual Task & Progress
+{{actual_task}}
+
+2. Issue & Action:
+{{issue_action}}
+
+3. Next Plan:
+{{next_plan}}

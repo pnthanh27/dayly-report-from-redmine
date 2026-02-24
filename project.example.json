@@ -1,0 +1,11 @@
+{
+    "PROJECT_CODE": {
+        "link_log_task": "https://xxxx/redmine/projects/xxx/time_entries",
+        "to": "xx@vixxetis.com.vn",
+        "from": "xxxx@xx.com.vn",
+        "subject": "[xxx] Daily Report {{date}}",
+        "dear": "Mr. Dat",
+        "issue_action": [],
+        "next_plan": []
+    }
+}

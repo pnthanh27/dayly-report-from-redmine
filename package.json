@@ -1,0 +1,17 @@
+{
+  "name": "senddaily",
+  "version": "1.0.0",
+  "description": "1 mô tả: đây là tool gửi mail báo cáo công việc công việc hoạn thành sẽ lấy từ https://insight.vietis.com.vn:92/redmine/login sau đó gửi mail đến email của dự án từ email của tôi. để excute tool này cần chạy lệnh node index.js 2 input:     - file project.json chưa thông tin dự án:         {             \"{code dự án}\": {                 \"link_log_task\": \"link log task\",                 \"to\": \"email người nhận\",                 \"from\": \"email người gửi\",                 \"subject\": \"tiêu đề mail\",                 \"dear\": \"người nhận\",                 \"issue_action\": [\"các vấn đề chưa giải quyết 1 \",...],                 \"next_plan\": [\"kế hoạch tiếp theo 1 \",...],             }         }     - file template.txt chưa nội dung template mail:         Dear {{dear}},         Em xin gửi báo cáo công việc:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "nodemailer": "^8.0.1",
+    "puppeteer": "^24.37.5"
+  }
+}
